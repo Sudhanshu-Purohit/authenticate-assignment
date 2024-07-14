@@ -1,0 +1,30 @@
+.sidebar {
+    width: 28%;
+    min-height: 100vh;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    justify-content: space-between;
+    border: 2px solid red;
+    position: relative;
+}
+
+.topHeading {
+    font-size: 2.2rem;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+    padding: 20px 10px;
+    gap: 1.8rem;
+    width: 100%;
+    left: 0;
+    top: 6rem;
+    position: absolute;
+}
+
+.red {
+    background-color: #f33f40;
+}
