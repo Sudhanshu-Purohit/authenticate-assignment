@@ -1,10 +1,12 @@
-import './App.css'
-import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom'
-import LoginPage from './pages/login'
-import HomePage from './pages/home'
 import { useState } from 'react'
-import Sidebar from './components/sidebar'
-import WatchListPage from './pages/watchlist'
+import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom'
+import './App.css'
+import HomePage from './pages/Home/home'
+import LoginPage from './pages/Login/login'
+import WatchListPage from './pages/Watchlist/watchlist'
+import { Bounce, ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import MovieDetailPage from './pages/MovieDetail/movieDetail'
 
 function App() {
 
@@ -24,7 +26,12 @@ function App() {
         <Route path="/" element={<LoginPage setIsAuthenticated={setIsAuthenticated} />} />
         <Route path="/home" element={<ProtectedRoute element={<HomePage />} />} />
         <Route path="/watchlist" element={<ProtectedRoute element={<WatchListPage />} />} />
+        <Route path="/movie/:id" element={<MovieDetailPage />} />
       </Routes>
+      <ToastContainer 
+        autoClose={1500}
+        transition={Bounce}
+      />
     </BrowserRouter>
   )
 }

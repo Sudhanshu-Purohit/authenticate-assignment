@@ -1,7 +1,11 @@
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import './sidebar.css'
 
-const Sidebar = () => {
+type SidebarProps = {
+  title: string;
+}
+
+const Sidebar = ({title}: SidebarProps) => {
   const navigate = useNavigate();
   const location = useLocation();
   const path = location.pathname;
@@ -13,7 +17,7 @@ const Sidebar = () => {
 
   return (
     <div className='sidebar'>
-      <h2 className='topHeading' style={{color: "red"}}>{path === '/home' ? "Home Page" : "Watchlists"}</h2>
+      <h2 className='topHeading' style={{color: "red"}}>{title}</h2>
 
       <div className='buttons'>
         <Link

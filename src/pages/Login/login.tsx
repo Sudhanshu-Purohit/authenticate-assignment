@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import './login.css';
 import { useNavigate } from 'react-router-dom';
+import { toast } from 'react-toastify';
 
 interface loginPageProps {
   setIsAuthenticated: (value: boolean) => void;
@@ -23,7 +24,7 @@ const LoginPage = ({
 
   const createAccount = () => {
     if(!email) {
-      alert('Please enter your email address.');
+      toast.info("Please enter your email address.");
       return;
     }
 
