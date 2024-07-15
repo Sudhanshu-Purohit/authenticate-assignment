@@ -48,5 +48,21 @@ a {
   width: 80%;
   padding: 10px;
   margin: auto;
-  margin-top: 2rem;
+  margin-top: 1rem;
+
+  @media screen and (max-width: 895px) {
+    width: 95%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .container {
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .innerContainer {
+    padding: 0;
+  }
 }

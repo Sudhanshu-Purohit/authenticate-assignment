@@ -12,6 +12,7 @@
 
 .topHeading {
     font-size: 2.2rem;
+    margin-top: 2rem;
 }
 
 .buttons {
@@ -27,4 +28,24 @@
 
 .red {
     background-color: #f33f40;
+}
+
+@media screen and (max-width: 800px) {
+    .topHeading {
+        font-size: 1.6rem;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .sidebar {
+        min-height: 250px;
+    }
+
+    .buttons {
+        top: 3rem;
+    }
+
+    .topHeading {
+        margin-top: 0.5rem;
+    }
 }

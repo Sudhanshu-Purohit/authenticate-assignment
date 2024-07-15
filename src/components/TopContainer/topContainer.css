@@ -1,5 +1,4 @@
 .topContainer {
-    border: 2px solid red;
     padding: 14px;
     border-radius: 10px;
 }
@@ -17,4 +16,24 @@
 
 .para {
     font-size: 1.1rem;
+}
+
+@media screen and (max-width: 800px) {
+    .topContainerHeading {
+        font-size: 1.9rem;
+    }
+
+    .para {
+        font-size: 0.9rem;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .topContainerHeading {
+        font-size: 1.6rem;
+    }
+
+    .para {
+        font-size: 0.9rem;
+    }
 }
