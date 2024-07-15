@@ -26,7 +26,7 @@ const MovieDetailPage = () => {
     const fetchData = async () => {
       try {
         setIsLoading(true);
-        const res = await fetch(`http://www.omdbapi.com/?i=${param}&apikey=${apiKey}`);
+        const res = await fetch(`https://www.omdbapi.com/?i=${param}&apikey=${apiKey}`);
         const json = await res.json();
         setMovieData(json);
         setIsLoading(false);

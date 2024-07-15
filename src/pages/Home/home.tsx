@@ -25,7 +25,7 @@ const HomePage = () => {
 
     try {
       setIsLoading(true);
-      const res = await fetch(`http://www.omdbapi.com/?s=${searchQuery}&apikey=${apiKey}`);
+      const res = await fetch(`https://www.omdbapi.com/?s=${searchQuery}&apikey=${apiKey}`);
       const json = await res.json();
       setData(json.Search);
       setIsLoading(false);
