@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import { PulseLoader } from "react-spinners";
 import Sidebar from "../../components/SideBar/sidebar";
 import DetailMovieCard from "../../components/DetailMovieCard/detailMovieCard";
+const apiKey = import.meta.env.VITE_API_KEY;
 
 export type MovieData = {
   Title: string,
@@ -25,7 +26,7 @@ const MovieDetailPage = () => {
     const fetchData = async () => {
       try {
         setIsLoading(true);
-        const res = await fetch(`http://www.omdbapi.com/?i=${param}&apikey=4dc46b7a`);
+        const res = await fetch(`http://www.omdbapi.com/?i=${param}&apikey=${apiKey}`);
         const json = await res.json();
         setMovieData(json);
         setIsLoading(false);

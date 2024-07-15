@@ -7,6 +7,7 @@ import { PulseLoader } from "react-spinners";
 import MovieCard from "../../components/MovieCard/movieCard";
 import { useLocation } from "react-router-dom";
 import { toast } from 'react-toastify';
+const apiKey = import.meta.env.VITE_API_KEY;
 
 
 const HomePage = () => {
@@ -24,7 +25,7 @@ const HomePage = () => {
 
     try {
       setIsLoading(true);
-      const res = await fetch(`http://www.omdbapi.com/?s=${searchQuery}&apikey=4dc46b7a`);
+      const res = await fetch(`http://www.omdbapi.com/?s=${searchQuery}&apikey=${apiKey}`);
       const json = await res.json();
       setData(json.Search);
       setIsLoading(false);
